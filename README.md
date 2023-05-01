@@ -33,7 +33,9 @@ Content-Type: application/json
 
 # Response
 
-Book Added Sucessfully
+1.Book Added Sucessfully
+
+If the Author Name and Book Name are exists it will return "Book Already Exists"
 
 # Reference
 
@@ -53,7 +55,9 @@ Content-Type: application/json
 
 # Response
 
-Book Updated Sucessfully
+Book Updated Sucessfully.
+
+If the Author Name and Book Name are exists it will return "Book Already Exists"
 
 # Reference
 
