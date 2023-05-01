@@ -6,7 +6,10 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-
+/**
+ * Product entity.
+ * This Entity Class will Create Table in Database
+ */
 @Entity
 @Table(name="Book")
 public class Book {
