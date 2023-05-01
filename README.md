@@ -35,4 +35,56 @@ Content-Type: application/json
 
 Book Added Sucessfully
 
-![image](https://user-images.githubusercontent.com/54183307/235404803-c4497719-f184-4cf1-a9d3-73449b1f9654.png)
+# Reference
+
+![image](https://user-images.githubusercontent.com/54183307/235405656-07d716f9-1f14-44bc-b12d-d97bacca76f5.png)
+
+2.http://localhost:8080/update/book
+ 
+PUT /update/book
+Accept: application/json
+Content-Type: application/json
+
+{
+"bookName" : "Ponniyin Selvan",
+"authorName" : "Kalki",
+"bookCount" : 2
+}
+
+# Response
+
+Book Updated Sucessfully
+
+# Reference
+
+![image](https://user-images.githubusercontent.com/54183307/235405773-aeb6a4f6-9430-44c6-936c-d92fbc51081e.png)
+
+3.[http://localhost:8080/delete/book](http://localhost:8080/delete/book?id=2)
+ 
+DELETE /delete/book
+
+
+# Response
+
+Book Deleted Sucessfully
+
+# Reference
+
+![image](https://user-images.githubusercontent.com/54183307/235405891-34fa0366-a1a5-4e69-8045-e10155e9b643.png)
+
+1.http://localhost:8080/get/book
+ 
+GET /get/book
+Accept: application/json
+Content-Type: application/json
+
+
+# Response
+
+[{},{}...]
+
+# Reference
+
+![image](https://user-images.githubusercontent.com/54183307/235405988-3db6d0b1-0519-4afc-a37a-f064ef33d3d1.png)
+
+
