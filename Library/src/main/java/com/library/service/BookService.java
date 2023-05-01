@@ -15,5 +15,7 @@ public interface BookService {
 	public void deleteBook(long id );
 	
 	public List<Book> getBookList();
+	
+	public boolean isBookExists(String bookName,String authorName);
 
 }

@@ -18,33 +18,42 @@ import com.library.service.BookService;
 @RestController
 public class BookController {
 	@Autowired
-	BookService bookservice;
+	BookService bookService;
 	
 	@PostMapping("/add/book")
 	public String addBook(@RequestBody BookRequest bookRequest)
 	{
-		bookservice.add(bookRequest);
+		if(bookService.isBookExists(bookRequest.getBookName(), bookRequest.getAuthorName()))
+		{
+			return "Book Already Exists";
+		}
+			bookService.add(bookRequest);
 		
 		return "Book Added Sucessfully";
 	}
 	@PutMapping("/update/book")
 	public String updateBook(@RequestBody UpdateBookRequest updateBookRequest)
 	{
-		bookservice.update(updateBookRequest);
+		if(bookService.isBookExists(updateBookRequest.getBookName(), updateBookRequest.getAuthorName()))
+		{
+			return "Book Already Exists";
+		}
+		
+		bookService.update(updateBookRequest);
 		
 		return "Book Updated Sucessfully";
 	}
 	@DeleteMapping("/delete/book")
 	public String deleteBook(@RequestParam(value="id") Long id)
 	{
-		bookservice.deleteBook(id);
+		bookService.deleteBook(id);
 		
 		return "Book Deleted Sucessfully";
 	}
 	@GetMapping("/get/book")
 	public List<Book> getBook()
 	{	
-		return 	bookservice.getBookList();
+		return 	bookService.getBookList();
 	}
 	
 }

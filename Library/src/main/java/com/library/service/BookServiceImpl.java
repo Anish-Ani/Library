@@ -78,5 +78,15 @@ private BookRepository repo;
 		// TODO Auto-generated method stub
 		return bookList;
 	}
+	
+	public boolean isBookExists(String bookName,String authorName)
+	{
+		List<Book>bookList=repo.findByBookAndAuthorName(bookName, authorName);
+		if(bookList.size()>0)
+		{
+			return true;
+		}
+		return false;
+	}
 
 }
